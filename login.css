@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Far_MitraBd';
+}
+@font-face {
+    font-family: 'Far_MitraBd';
+    src: url('../fonts/Far_Mitra.ttf');
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1b1b1b;
+}
+.container{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container span{
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 6px;
+    background: #d8b91d59 ;
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2) rotate(calc(var(--i)*(360deg /50)));
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 50));
+}
+@keyframes animateBlink{
+    0%{
+        background:#f5d224 ;
+    }
+    25%{
+        background:rgb(27, 27, 27) ;
+    }
+}
+.login-box{
+    position: absolute;
+    width: 400px;
+    /* background: rgb(255, 255, 255); */
+}
+.login-box form{
+    width: 100%;
+    padding: 0 50px;
+}
+h2{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color:#fcd307;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    margin:25px 0;
+}
+.input-box input{
+    width: 100%;
+    margin: 5px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #f0da7ca8;
+    outline: none;
+    border-radius: 40px;
+    padding: 0 20px;
+    color: #ffff;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: 1px;
+    font-size: 15px;
+    background: rgb(27, 27, 27);
+    color:#f0da7ca8 ;
+    padding: 0 6px;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color:#ffff;
+    pointer-events: none;
+    transition: 0.5s ease;
+}
+.forgot-pass{
+    margin: 15px;
+    text-align: center;
+}
+.forgot-pass a{
+    font-size: 20px;
+    color: #ffff;
+    text-decoration: none;
+}
+.forgot-pass a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 50px;
+    margin-left: 5px;
+    background: #ccad10;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 20px;
+    color: black;
+}
+.signup-link{
+    margin: 20px 0 10px;
+    text-align: center;
+    color: #ffff;
+}
+.signup-link a{
+    font-size: 20px;
+    color: #fcd307;
+    text-decoration: none;
+    font-weight: 600;
+}
+.signup-link a:hover{
+    text-decoration: underline;
+}
